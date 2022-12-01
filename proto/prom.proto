@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package Alert;
+
+service HeroesService {
+  rpc ListAlert (AlertById) returns (Alert) {}
+}
+
+message AlertById {
+  int32 id = 1;
+}
+
+message Alert {
+  int32 id = 1;
+  string name = 2;
+}
